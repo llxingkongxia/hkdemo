@@ -22,8 +22,8 @@ else
     lib_path=$path/libs/hklib_wino_2x3/lib64/
 fi
 
-echo "cmd -> $cmd"
-eval "$cmd"
+rm -f ./$bin
+eval "$cmd" > /dev/null 2>&1
 
 export LD_LIBRARY_PATH=$lib_path:$LD_LIBRARY_PATH
 ./$bin
